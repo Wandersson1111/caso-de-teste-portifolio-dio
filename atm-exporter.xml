@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10000</projectId>
+    <projectKey>SWAG</projectKey>
+    <exportDate>2024-08-27 13:53:30 UTC</exportDate>
+    <folders>
+        <folder fullPath="Login" index="0"/>
+    </folders>
+    <testCases>
+        <testCase id="178183674" key="SWAG-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Wandersson Swendcy da Silva Santos</createdBy>
+            <createdOn>2024-08-23 14:34:48 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente sem cadastro deseja criar uma conta]]></name>
+            <objective><![CDATA[Verificar funcionalidade de login]]></objective>
+            <owner>712020:6aefd1e3-f665-4474-b7c7-c469e4f28b1f</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente esteja na tela de login
+
+And não esteja cadastrado no sistema
+
+When clicar em 'criar conta'
+
+Then será redirecionado para uma tela de criação de nova conta.]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="178187816" key="SWAG-T2" paramType="PARAMETER">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Wandersson Swendcy da Silva Santos</createdBy>
+            <createdOn>2024-08-23 15:57:46 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente sem cadastro tenta fazer login]]></name>
+            <owner>712020:6aefd1e3-f665-4474-b7c7-c469e4f28b1f</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Deprecated]]></status>
+            <parameters>
+                <parameter index="0">
+                    <defaultValue><![CDATA[172.17.25.54]]></defaultValue>
+                    <name><![CDATA[Servidor QA]]></name>
+                </parameter>
+            </parameters>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar url X]]></description>
+                        <expectedResult><![CDATA[usu&aacute;rio deve visualizar tela de login<br><br>]]></expectedResult>
+                        <testData><![CDATA[<var>Servidor QA</var>&nbsp;]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita username no campo 'username']]></description>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="178190968" key="SWAG-T3">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Wandersson Swendcy da Silva Santos</createdBy>
+            <createdOn>2024-08-23 17:45:23 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Compra de produto no Swag Labs]]></name>
+            <objective><![CDATA[Testar o fluxo de login e compra de um produto no site Swag Labs, garantindo que o usu&aacute;rio consiga acessar a p&aacute;gina de produtos, adicionar um item ao carrinho, e completar o processo de checkout com sucesso. ]]></objective>
+            <owner>712020:6aefd1e3-f665-4474-b7c7-c469e4f28b1f</owner>
+            <precondition><![CDATA[O usu&aacute;rio deve ter acesso &agrave; internet e um navegador web compat&iacute;vel instalado. O site Swag Labs deve estar acess&iacute;vel e funcional. O usu&aacute;rio deve estar registrado no sistema com um dos nomes de usu&aacute;rio aceitos, e a senha padr&atilde;o deve ser conhecida. ]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o usuário está na página de login do Swag Labs
+
+
+When o usuário insere o "standard_user" no campo de nome de usuário
+And o usuário insere a senha "secret_sauce" no campo de senha
+And o usuário clica no botão "Login"
+Then o usuário é redirecionado para a página de produtos
+
+
+Given que o usuário está logado na página de produtos
+When o usuário adiciona o produto "Sauce Labs Backpack" ao carrinho
+And o usuário clica no ícone do carrinho de compras
+Then o produto "Sauce Labs Backpack" deve estar presente no carrinho
+When o usuário clica no botão "Checkout"
+Then o usuário é redirecionado para a página de checkout]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="178360554" key="SWAG-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Wandersson Swendcy da Silva Santos</createdBy>
+            <createdOn>2024-08-26 15:56:26 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Testar o fluxo de login e compra de um produto no Swag Labs]]></name>
+            <objective><![CDATA[Testar o fluxo de login e compra de um produto no site Swag Labs, garantindo que o usu&aacute;rio consiga acessar a p&aacute;gina de produtos, adicionar um item ao carrinho, e completar o processo de checkout com sucesso.]]></objective>
+            <owner>712020:6aefd1e3-f665-4474-b7c7-c469e4f28b1f</owner>
+            <precondition><![CDATA[O usu&aacute;rio deve ter acesso &agrave; internet e um navegador web compat&iacute;vel instalado. O site Swag Labs deve estar acess&iacute;vel e funcional. O usu&aacute;rio deve estar registrado no sistema com um dos nomes de usu&aacute;rio aceitos, e a senha padr&atilde;o deve ser conhecida.]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar o site Swag Labs]]></description>
+                        <expectedResult><![CDATA[A p&aacute;gina inicial do Swag Labs deve ser carregada com o campo de login dispon&iacute;vel]]></expectedResult>
+                        <testData><![CDATA[URL do site Swag Labs]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Login no sistema]]></description>
+                        <expectedResult><![CDATA[O usu&aacute;rio deve ser redirecionado para a p&aacute;gina de produtos ap&oacute;s o login]]></expectedResult>
+                        <testData><![CDATA[<ul><li>Nome de usu&aacute;rio: (use um dos nomes de usu&aacute;rio aceitos)</li><li>Senha: &quot;secret_sauce&quot;</li></ul>]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Verificar o login]]></description>
+                        <expectedResult><![CDATA[A p&aacute;gina deve exibir a lista de produtos dispon&iacute;veis para compra ]]></expectedResult>
+                        <testData><![CDATA[Acesso &agrave; p&aacute;gina de produtos.]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Adicionar um produto ao carrinho ]]></description>
+                        <expectedResult><![CDATA[O produto deve ser adicionado ao carrinho com sucesso, e o n&uacute;mero de itens no carrinho deve ser atualizado ]]></expectedResult>
+                        <testData><![CDATA[Produto: &quot;Sauce Labs Backpack&quot; ]]></testData>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Verificar o carrinho ]]></description>
+                        <expectedResult><![CDATA[O produto &quot;Sauce Labs Backpack&quot; deve estar listado no carrinho ]]></expectedResult>
+                        <testData><![CDATA[Acesso ao &iacute;cone do carrinho no canto superior direito ]]></testData>
+                    </step>
+                    <step index="5">
+                        <customFields/>
+                        <description><![CDATA[Finalizar a compra ]]></description>
+                        <expectedResult><![CDATA[O usu&aacute;rio deve conseguir continuar para a p&aacute;gina de resumo do pedido e finalizar a compra ]]></expectedResult>
+                        <testData><![CDATA[<ul><li>Informa&ccedil;&otilde;es de checkout:</li><li>Nome: &quot;Jo&atilde;o&quot;</li><li>Sobrenome: &quot;Silva&quot;</li><li>C&oacute;digo Postal: &quot;12345&quot;</li></ul>]]></testData>
+                    </step>
+                    <step index="6">
+                        <customFields/>
+                        <description><![CDATA[Verificar a conclus&atilde;o do pedido ]]></description>
+                        <expectedResult><![CDATA[Uma mensagem de confirma&ccedil;&atilde;o de pedido deve ser exibida, indicando que o pedido foi completado com sucesso ]]></expectedResult>
+                        <testData><![CDATA[Acesso &agrave; p&aacute;gina de confirma&ccedil;&atilde;o de pedido ]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
